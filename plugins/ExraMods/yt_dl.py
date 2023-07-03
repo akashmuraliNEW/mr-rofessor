@@ -9,7 +9,7 @@ from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 
 
-@Client.on_message(filters.command(['song', 'mp3']) & filters.private)
+@Client.on_message(filters.command(['song', 'mp3','s']))
 async def song(client, message):
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -28,7 +28,7 @@ async def song(client, message):
         thumb_name = f'thumb{title}.jpg'
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, 'wb').write(thumb.content)
-        performer = f"[Mᴋɴ Bᴏᴛᴢ™]" 
+        performer = f"[Rebekah💌]" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -43,7 +43,7 @@ async def song(client, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
 
-        cap = "**BY›› [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)**"
+        cap = "**🎶 𝐓𝐈𝐓𝐋𝐄 ›› {title}\n𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 ›› {duration}\n𝐌𝐀𝐃𝐄 𝐁𝐘 ›› ❤️\n𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 ›› [ℝ𝕖𝕓𝕖𝕜𝕒𝕙]**"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
