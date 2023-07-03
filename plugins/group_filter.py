@@ -161,8 +161,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
-            await asyncio.sleep(10)
+            k = await query.message.edit('⭕Given Movie/Series is not found in bot!⭕\n☞ 🎭 REASONS 👇\n☞ Incorrect spelling. try again with correct spelling\n☞ Dont add special characters or Symbols in text\n☞ Movie not released\n☞ NO cam prints\n☞ HD files mathreme bot ill upload chyu vro\n☞ contact admin if its an Ott released movie/series to add in bot @HELL_GaM💌')
+            await asyncio.sleep(30)
             await k.delete()
 
 
@@ -281,22 +281,26 @@ async def auto_filter(client, msg, spoll=False):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
-            await hehe.delete()            
+            await hehe.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
+            #await hehe.delete()            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))           
             await asyncio.sleep(IMDB_DELET_TIME)
-            await hmm.delete()            
+            await hmm.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
+            #await hmm.delete()            
         except Exception as e:
             logger.exception(e)
             cdb = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
-            await cdb.delete()
+            await cdb.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
+            #await cdb.delete()
     else:
         crl = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(IMDB_DELET_TIME)
-        await crl.delete()        
+        await crl.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
+        #await crl.delete()        
     if spoll:
         await msg.message.delete()
 
@@ -311,9 +315,9 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("I couldn't find anything in that name.")
         await asyncio.sleep(8)
-        await k.delete()
+        #await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -330,7 +334,7 @@ async def advantage_spell_chok(msg):
     user = msg.from_user.id if msg.from_user else 0
     movielist = []
     gs_parsed = list(dict.fromkeys(gs_parsed))  # removing duplicates https://stackoverflow.com/a/7961425
-    if len(gs_parsed) > 3:
+    if len(gs_parsed) > 1:
         gs_parsed = gs_parsed[:3]
     if gs_parsed:
         for mov in gs_parsed:
@@ -340,9 +344,9 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
-        await k.delete()
+        await msg.reply("I couldn't find anything related to that. Check your spelling")
+        #await asyncio.sleep(8)
+        #await k.delete()
         return
     temp.GP_SPELL[msg.id] = movielist
     btn = [[
