@@ -316,8 +316,8 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply("I couldn't find anything in that name.")
-        await asyncio.sleep(8)
-        #await k.delete()
+        await asyncio.sleep(20)
+        await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -345,8 +345,8 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         await msg.reply("I couldn't find anything related to that. Check your spelling")
-        #await asyncio.sleep(8)
-        #await k.delete()
+        await asyncio.sleep(20)
+        await k.delete()
         return
     temp.GP_SPELL[msg.id] = movielist
     btn = [[
