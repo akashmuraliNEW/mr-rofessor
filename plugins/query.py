@@ -1,4 +1,4 @@
-abimport asyncio, re, ast, math, logging, random, pyrogram
+import asyncio, re, ast, math, logging, random, pyrogram
 
 # pyrogram functions
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
