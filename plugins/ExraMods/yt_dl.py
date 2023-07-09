@@ -54,6 +54,7 @@ async def song(client, message):
             quote=False,
             title=title,
             duration=dur,
+            reply_to_message_id=message.id,
             performer=performer,
             thumb=thumb_name
         )            
