@@ -137,9 +137,9 @@ async def next_page(bot, query):
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
         )
-      btn.insert(0, [
-        InlineKeyboardButton("📤 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 📤", callback_data=f"send_all#{req}#{key}#{pre}")
-    ])  
+        btn.insert(2, [
+        InlineKeyboardButton("𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 ⮯", callback_data=f"send_all#{req}#{key}#{pre}")
+    ])
     except MessageNotModified:
         pass
     await query.answer()
