@@ -137,9 +137,6 @@ async def next_page(bot, query):
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
         )
-        btn.insert(2, [
-        InlineKeyboardButton("𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 ⮯", callback_data=f"send_all#{req}#{key}#{pre}")
-    ])
     except MessageNotModified:
         pass
     await query.answer()
@@ -225,10 +222,7 @@ async def auto_filter(client, msg, spoll=False):
     else:        
         if settings["button"]:
             btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ]
-            btn.insert(0, [
-        InlineKeyboardButton("𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 ⮯", callback_data=f"send_all#{req}#{key}#{pre}")
-    ])
-     
+        
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ] 
