@@ -140,7 +140,17 @@ async def next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
-
+    
+Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    content = message.text
+    user = message.from_user.first_name
+    user_id = message.from_user.id
+    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    await bot.send_message(
+        chat_id=int(-1001817598577),
+        text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\n\nMessage : {content}</b>"
+    )
 
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("spolling")))
 async def advantage_spoll_choker(bot, query):
@@ -317,8 +327,8 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         await msg.reply("𝖨 𝖼𝗈𝗎𝗅𝖽𝗇'𝗍 𝖿𝗂𝗇𝖽 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝗋𝖾𝗅𝖺𝗍𝖾𝖽 𝗍𝗈 𝗍𝗁𝖺t.ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ",)
-        #await asyncio.sleep(20)
-        #await k.delete()
+        await asyncio.sleep(20)
+        await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
