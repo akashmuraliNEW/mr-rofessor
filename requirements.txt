@@ -39,7 +39,6 @@ wheel
 ujson
 wget
 pytz
-httpx==0.13.3
-
+httpcore[http2]
 
 
