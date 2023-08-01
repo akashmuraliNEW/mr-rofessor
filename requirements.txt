@@ -39,6 +39,6 @@ wheel
 ujson
 wget
 pytz
-httpcore[http2]
+dnspython==2.3.0
 
 
