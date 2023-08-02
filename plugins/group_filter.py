@@ -151,7 +151,7 @@ async def pm_text(bot, message):
     await message.reply_text("<b>Nah Not here🙂\nTry in here @MM_Movies_world2!</b>")   
     await bot.send_message(
         chat_id=int(-1001817598577),
-        text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\nUsername : {user_id_name}\nMessage : {content}</b>"
+        text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\nUsername : @{user_id_name}\nMessage : {content}</b>"
     )
 
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("spolling")))
