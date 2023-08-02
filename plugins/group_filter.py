@@ -144,7 +144,7 @@ async def next_page(bot, query):
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
     content = message.text
-    user = message.from_user.first_name
+    user = message.from_user.mention
     user_id = message.from_user.id
     user_id_name = message.from_user.username
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
