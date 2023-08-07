@@ -6,6 +6,7 @@ from collections import defaultdict
 from typing import Dict, List, Union
 from pyrogram import Client
 from time import time
+from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
