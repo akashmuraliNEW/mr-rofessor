@@ -363,7 +363,7 @@ Delete A Lot Of Messages From Groups!
     CUDNT_FND = """ʜᴇʟʟᴏ {} ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ ᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ?"""
 
     CAPTION = """
-<b>📂 File Name <code>{file_name}</code></b>                                  
+<b>📂 File Name : <code>{file_name}</code></b>                                  
 <b>💿 Size :  {file_size}</b>
 """
 
