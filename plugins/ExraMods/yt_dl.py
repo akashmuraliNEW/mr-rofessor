@@ -12,7 +12,7 @@ from info import MUSIC_CHAT
 
 @Client.on_message(filters.command(['song', 's']) & ~filters.private & ~filters.channel)
 async def song(client, message):
-    chat_id = message.chat.id
+   chat_id = message.chat.id
     
    if MUSIC_CHAT == chat_id:
     user_id = message.from_user.id 
