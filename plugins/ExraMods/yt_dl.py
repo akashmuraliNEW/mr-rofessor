@@ -70,7 +70,7 @@ async def song(client, message):
     except Exception as e:
         print(e)
    else:
-         await message.reply_text(f"<b>Hᴇʏ message.from_user.first_name❤️... Group is needs to be verified before using Song feature.Contact owner to verify @HELL_GaMtesting..</b>")
+         await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}❤️... Group is needs to be verified before using Song feature.Contact owner to verify @HELL_GaM</b>")
         
 
 def get_text(message: Message) -> [None,str]:
