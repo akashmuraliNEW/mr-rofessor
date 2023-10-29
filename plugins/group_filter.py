@@ -294,7 +294,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-           if message.chat.id == MUSIC_CHAT:
+           if message.chat.id in MUSIC_CHAT:
                 await message.reply('Use /s or /song commands to download Songs.')
            else:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
