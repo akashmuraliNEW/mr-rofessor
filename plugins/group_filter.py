@@ -5,7 +5,7 @@ from utils import get_shortlink
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, PM_IMDB, SINGLE_BUTTON, PROTECT_CONTENT, \
-    SPELL_CHECK_REPLY, IMDB_TEMPLATE, IMDB_DELET_TIME, START_MESSAGE, PMFILTER, G_FILTER, BUTTON_LOCK, BUTTON_LOCK_TEXT, SHORT_URL, SHORT_API, SPELL_IMG
+    SPELL_CHECK_REPLY, IMDB_TEMPLATE, IMDB_DELET_TIME, START_MESSAGE, PMFILTER, G_FILTER, BUTTON_LOCK, BUTTON_LOCK_TEXT, SHORT_URL, SHORT_API, SPELL_IMG, MUSIC_CHAT
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums 
@@ -148,7 +148,7 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     user_id_name = message.from_user.username
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    await message.reply_text("<b>Nah Not here🙂\nTry in here @MM_Movies_world2!</b>")   
+    await message.reply_text("<b>Nah Not here🙂\nRequest Movies/series/anime in here @MM_Movies_world2!</b>")   
     await bot.send_message(
         chat_id=int(-1001817598577),
         text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\nUsername : @{user_id_name}\nMessage : {content}</b>"
@@ -294,6 +294,9 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
+            if message.chat.id == MUSIC_CHAT:
+                return
+            else:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
             await hehe.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
