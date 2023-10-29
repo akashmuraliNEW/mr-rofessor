@@ -7,10 +7,12 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
+from info import MUSIC_CHAT
 
 
 @Client.on_message(filters.command(['song', 's']) & ~filters.private & ~filters.channel)
 async def song(client, message):
+ if message.chat.id == MUSIC_CHAT:
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
@@ -67,6 +69,9 @@ async def song(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+else:
+  await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}❤️... Group is needs to be verified before using Song feature.Contact owner to verify @HELL_GaM</b>")
+        
 
 def get_text(message: Message) -> [None,str]:
     text_to_return = message.text
