@@ -295,6 +295,9 @@ async def auto_filter(client, msg, spoll=False):
     if imdb and imdb.get('poster'):
         try:
            if message.chat.id in MUSIC_CHAT:
+                # Add this code for debugging
+                print(f"message.chat.id: {message.chat.id}")
+                print(f"MUSIC_CHAT: {MUSIC_CHAT}")
                 await message.reply('Use /s or /song commands to download Songs.')
            else:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
