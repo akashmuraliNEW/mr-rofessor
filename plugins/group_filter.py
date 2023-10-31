@@ -204,7 +204,10 @@ async def give_filter(client, message):
 
 
 async def auto_filter(client, msg, spoll=False):
+   
    message = msg
+   content = message.text
+   if content.startswith("/") or content.startswith("#"): return
    if message.chat.id in MUSIC_CHAT:
                 # Add this code for debugging
                 print(f"message.chat.id: {message.chat.id}")
