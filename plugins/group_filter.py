@@ -210,8 +210,6 @@ async def auto_filter(client, msg, spoll=False):
    if content.startswith("/") or content.startswith("#"): return
    if message.chat.id in MUSIC_CHAT:
                 # Add this code for debugging
-                print(f"message.chat.id: {message.chat.id}")
-                print(f"MUSIC_CHAT: {MUSIC_CHAT}")
                 await message.reply('Use /s or /song commands to download Songs.')
    else:
     if not spoll:
@@ -377,8 +375,7 @@ async def advantage_spell_chok(client, msg):
         for k, movie_name in enumerate(movielist)
     ]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
-    spell_check_del = await msg.reply_photo(
-        photo=(SPELL_IMG),
+    spell_check_del = await msg.reply(
         caption=(script.CUDNT_FND.format(reqstr.mention)),
         reply_markup=InlineKeyboardMarkup(btn)
         )
