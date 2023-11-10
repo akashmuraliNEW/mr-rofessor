@@ -27,8 +27,8 @@ from asyncio import sleep
 import time
 #from mbot import AUTH_CHATS, LOGGER, Mbot,LOG_GROUP,BUG
 from pyrogram import filters,enums
-from mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy,forward 
-from ytdl import getIds,ytdl_down,audio_opt
+from ExraMods.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy,forward 
+from ExraMods.ytdl import getIds,ytdl_down,audio_opt
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 #import psutil
