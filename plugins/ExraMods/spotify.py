@@ -28,7 +28,7 @@ import time
 #from mbot import AUTH_CHATS, LOGGER, Mbot,LOG_GROUP,BUG
 from pyrogram import filters,enums
 from plugins.extramods.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy,forward 
-from ExraMods.ytdl import getIds,ytdl_down,audio_opt
+from plugins.extramods.ytdl import getIds,ytdl_down,audio_opt
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 #import psutil
