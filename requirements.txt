@@ -45,3 +45,6 @@ dnspython==2.3.0
 
 spotipy
 mutagen
+asgiref
+yt_dlp
+apscheduler
