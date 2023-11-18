@@ -1,5 +1,5 @@
 import requests
-from info import BOT_TOKEN
+#from info import BOT_TOKEN
 
 
 
@@ -229,7 +229,7 @@ def send_dp(update, context):
 
 def main():
 
-    BOT_TOKEN = ''
+    BOT_TOKEN = environ['BOT_TOKEN']
 
     updater = Updater(BOT_TOKEN, use_context=True)
 
