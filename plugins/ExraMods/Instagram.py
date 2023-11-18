@@ -13,7 +13,7 @@ async def link_handler(Mbot, message):
         if url.startswith("https://www.ddddinstagram"):
            url= url.replace("ddddinstagram.com","ddinstagram.com")
            dump_file=await message.reply_video(url)
-           await message.reply("Send Feedback here @HELLGaM"))
+           await message.reply("Send Feedback here @HELLGaM")
         if url.endswith("="):
            dump_file=await message.reply_video(url[:-1])
            await message.reply("Send Feedback here @HELLGaM")
