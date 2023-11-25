@@ -1,4 +1,4 @@
-from info import SUPPORT_GROUP
+#from info import SUPPORT_GROUP
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import openai
@@ -9,9 +9,9 @@ SUPPORT_LINK = 'https://t.me/HELL_GaM'
 @Client.on_message(filters.command("openai"))
 async def ask_question(client, message):
     #if message.chat.id != SUPPORT_GROUP:
-        btn = [[
-            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
-        ]]
+       # btn = [[
+       #     InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+      #  ]]
         return await message.reply("This command only working in support group.", reply_markup=InlineKeyboardMarkup(btn))
     try:
         text = message.text.split(" ", 1)[1]
