@@ -47,3 +47,4 @@ mutagen
 asgiref
 yt_dlp
 apscheduler
+openai
