@@ -8,7 +8,7 @@ SUPPORT_LINK = 'https://t.me/HELL_GaM'
 
 @Client.on_message(filters.command("openai"))
 async def ask_question(client, message):
-    if message.chat.id != SUPPORT_GROUP:
+    #if message.chat.id != SUPPORT_GROUP:
         btn = [[
             InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
         ]]
