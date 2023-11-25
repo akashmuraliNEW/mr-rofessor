@@ -3,7 +3,7 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import openai
 
-openai.api_key = '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'
+openai.api_key = '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'
 SUPPORT_LINK = 'https://t.me/HELL_GaM'
 
 @Client.on_message(filters.command("openai"))
