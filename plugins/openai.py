@@ -3,16 +3,17 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import openai
 
-openai.api_key = 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
+openai.api_key = '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'
 SUPPORT_LINK = 'https://t.me/HELL_GaM'
+SUPPORT_GROUP = -1001565806434
 
 @Client.on_message(filters.command("openai"))
 async def ask_question(client, message):
-    #if message.chat.id != SUPPORT_GROUP:
-       # btn = [[
-       #     InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
-      #  ]]
-      #  return await message.reply("This command only working in support group.", reply_markup=InlineKeyboardMarkup(btn))
+    if message.chat.id != SUPPORT_GROUP:
+        btn = [[
+            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
+        ]]
+        return await message.reply("This command only working in support group.", reply_markup=InlineKeyboardMarkup(btn))
     try:
         text = message.text.split(" ", 1)[1]
     except:
