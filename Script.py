@@ -124,17 +124,6 @@ these are the extra features of this bot
 <code>Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs</code>
 
 📯 <u><b>Chat & User</b></u>
-• /broadcast - <code>ᴛᴏ ʙʀᴏᴀᴅᴄᴀꜱᴛ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴀʟʟ ᴜꜱᴇʀꜱ</code>
-• /group_broadcast - <code>ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ᴄᴏɴɴᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘs</code>
-• /leave  - <code>ᴛᴏ ʟᴇᴀᴠᴇ ꜰʀᴏᴍ ᴀ ᴄʜᴀᴛ.</code>
-• /disable  -  <code>ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴀ ᴄʜᴀᴛ.</code>
-• /invite - <code>Tᴏ ɢᴇᴛ ᴛʜᴇ ɪɴᴠɪᴛᴇ ʟɪɴᴋ ᴏғ ᴀɴʏ ᴄʜᴀᴛ ᴡʜᴇʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ.</code>
-• /ban_user  - <code>ᴛᴏ ʙᴀɴ ᴀ ᴜꜱᴇʀ.</code>
-• /unban_user  - <code>ᴛᴏ ᴜɴʙᴀɴ ᴀ ᴜꜱᴇʀ.</code>
-• /restart - <code>Tᴏ Rᴇsᴛᴀʀᴛ ᴀ Bᴏᴛ</code>
-• /usend - <code>Tᴏ Sᴇɴᴅ ᴀ Mᴇssɢᴀᴇ ᴛᴏ Pᴇʀᴛɪᴄᴜʟᴀʀ Usᴇʀ</code>
-• /gsend - <code>Tᴏ Sᴇɴᴅ ᴀ Mᴇssᴀɢᴇ ᴛᴏ Pᴇʀᴛɪᴄᴜʟᴀʀ Cʜᴀᴛ</code>
-
 • /clear_junk - clear all delete account & blocked account in database 
 • /clear_junk_group - clear add removed group or deactivated groups on db"""
 
@@ -347,7 +336,7 @@ Delete A Lot Of Messages From Groups!
 
     TOP_ALRT_MSG = """♻️ ᴄʜᴇᴄᴋɪɴɢ ꜰɪʟᴇ ᴏɴ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ... ♻️"""
 
-    MVE_NT_FND = """⭕Given Movie/Series is not found in bot!⭕\n☞ 🎭 REASONS (Read Everything Carefully) 👇\n☞ Incorrect spelling. try again with correct spelling\n☞ Dont add special characters or Symbols in text like ';:!?/*+-_$&#@'\n☞ Movie not released\n☞ NO cam prints\n☞ HD files mathreme bot ill upload chyu vro\n☞ contact admin if its an Ott released movie/series to add in bot @HELL_GaMi💌"""
+    MVE_NT_FND = """⭕Given Movie/Series is not found in bot!⭕\n☞ 🎭 REASONS (Read Everything Carefully) 👇\n☞ Incorrect spelling\n☞ Dont add special characters or Symbols in text like ' ; : ! ? / * + - _ $ & # @....'\n☞ Movie not released in any OTT platform\n☞ NO Theatre prints\n☞ HD Files only No leaked prints added\n☞ contact admin if its an Ott released or old movie/series/anime/dramas to add in bot @HELL_GaMi💌"""
 
     I_CUDNT = """ʜᴇʟʟᴏ {} ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇꜱ ɪɴ ᴛʜᴀᴛ ɴᴀᴍᴇ. 
 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 
