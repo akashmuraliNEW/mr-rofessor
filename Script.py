@@ -336,7 +336,7 @@ Delete A Lot Of Messages From Groups!
 
     TOP_ALRT_MSG = """♻️ ᴄʜᴇᴄᴋɪɴɢ ꜰɪʟᴇ ᴏɴ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ... ♻️"""
 
-    MVE_NT_FND = """⭕Given Movie/Series is not found in bot!⭕\n☞ 🎭 REASONS (Read Everything Carefully) 👇\n☞ Incorrect spelling\n☞ Dont add special characters or Symbols in text like ' ; : ! ? / * + - _ $ & # @....'\n☞ Movie not released in any OTT platform\n☞ NO Theatre prints\n☞ HD Files only No leaked prints added\n☞ contact admin if its an Ott released or old movie/series/anime/dramas to add in bot @HELL_GaMi💌"""
+    MVE_NT_FND = """<b>⭕Given Movie/Series is not found in bot!</b>⭕\n☞ <b>🎭 REASONS (Read Everything Carefully)</b> 👇\n☞ Incorrect spelling\n☞ Dont add special characters or Symbols in text like ' ; : ! ? / * + - _ $ & # @....'\n☞ Movie not released in any OTT platform\n☞ NO Theatre prints\n☞ HD Files only No leaked prints added\n☞ contact admin if its an Ott released or old movie/series/anime/dramas to add in bot @HELL_GaMi💌"""
 
     I_CUDNT = """ʜᴇʟʟᴏ {} ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇꜱ ɪɴ ᴛʜᴀᴛ ɴᴀᴍᴇ. 
 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 
