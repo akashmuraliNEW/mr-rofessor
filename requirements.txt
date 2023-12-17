@@ -20,7 +20,7 @@ motor==3.0.0
 #---ytdl----#
 youtube-search-python
 youtube-search
-yt-dlp==2023.2.17
+yt-dlp
 
 #---imdb---#
 cinemagoer==2023.5.1
