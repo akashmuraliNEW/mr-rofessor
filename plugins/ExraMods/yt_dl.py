@@ -8,7 +8,7 @@ from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from info import MUSIC_CHAT
-
+FIXIE_SOCKS_HOST= environ.get('FIXIE_SOCKS_HOST')
 
 @Client.on_message(filters.command(['song', 's']) & ~filters.private & ~filters.channel)
 async def song(client, message):
@@ -21,7 +21,10 @@ async def song(client, message):
         query += ' ' + str(i)
     print(query)
     m = await message.reply(f"**ѕєαrchíng чσur ѕσng...!\n {query}**")
-    ydl_opts = {"format": "bestaudio[ext=m4a]"}
+    ydl_opts = {
+         "format": "bestaudio[ext=m4a]",
+         "proxy": f"socks5://{FIXIE_SOCKS_HOST}"
+    }
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
