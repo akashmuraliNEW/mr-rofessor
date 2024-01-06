@@ -24,6 +24,7 @@ async def song(client, message):
     m = await message.reply(f"**ѕєαrchíng чσur ѕσng...!\n {query}**")
     ydl_opts = {
          "format": "bestaudio[ext=m4a]",
+         "ratelimit": "1000000",
     }
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
