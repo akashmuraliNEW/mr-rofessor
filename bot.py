@@ -5,7 +5,7 @@ from pyrogram.raw.all import layer
 #from Telethroid import started_telethroid
 from database.ia_filterdb import Media
 from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, PORT, WEBHOOK
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, PORT, WEB_SUPPORT
 from utils import temp, __repo__, __license__, __copyright__
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
@@ -53,7 +53,7 @@ class Bot(Client):
         curr = datetime.now(timezone(TIMEZONE))
         date = curr.strftime('%d %B, %Y')
         time = curr.strftime('%I:%M:%S %p')
-        if WEBHOOK:
+        if WEB_SUPPORT:
             app = web.AppRunner(await web_server())
             await app.setup()
             bind_address = "0.0.0.0"
