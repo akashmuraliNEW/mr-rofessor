@@ -13,7 +13,7 @@ from datetime import datetime
 from pytz import timezone
 from pyrogram.errors import BadRequest, Unauthorized
 
-if WEBHOOK:
+if WEB_SUPPORT:
     from plugins import web_server 
     from aiohttp import web
 
